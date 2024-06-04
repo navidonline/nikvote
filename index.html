@@ -110,7 +110,7 @@
         });	
         Telegram.WebApp.MainButton.show();
 
-        Telegram.WebApp.expand();
+
 
         // Function to call showPopup API
         function showPopup() {
@@ -154,6 +154,8 @@
         Telegram.WebApp.onEvent('themeChanged', function() {
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
+
+        Telegram.WebApp.expand();
 
     </script>
 
