@@ -106,7 +106,7 @@
             Telegram.WebApp.close();
         });	
         Telegram.WebApp.MainButton.show();
-        Telegram.WebApp.isClosingConfirmationEnabled=true;
+        Telegram.WebApp.enableClosingConfirmation();
 
 
         // Function to call showPopup API
@@ -153,9 +153,6 @@
         });
 
         Telegram.WebApp.expand();
-        Telegram.WebApp.MainButton.onClick(()=>{
-
-        })
     </script>
 </body>
 </html>
