@@ -103,10 +103,10 @@
 
         // Show main button
         Telegram.WebApp.MainButton.setParams({
-            text: 'Main Button'
+            text: 'خروج'
         });
         Telegram.WebApp.MainButton.onClick(function () {
-            Telegram.WebApp.showAlert('Main Button was clicked')
+            Telegram.WebApp.close();
         });	
         Telegram.WebApp.MainButton.show();
 
@@ -156,11 +156,9 @@
         });
 
         Telegram.WebApp.expand();
+        Telegram.WebApp.MainButton.onClick(()=>{
 
+        })
     </script>
-
-    <!-- Eruda is console for mobile browsers -->
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>eruda.init();</script>
 </body>
 </html>
