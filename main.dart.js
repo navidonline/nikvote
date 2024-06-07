@@ -48767,7 +48767,7 @@ A.VL.prototype={
 $0(){++this.a.d},
 $S:0}
 A.VM.prototype={
-$0(){$.a7C().zs("toggleMainButton")},
+$0(){$.a7C().zs("Telegram.WebApp.expand()")},
 $S:0}
 A.b3.prototype={
 bK(a){var s=a.a,r=this.a
