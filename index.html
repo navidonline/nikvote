@@ -34,7 +34,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1236045866";
+    const serviceWorkerVersion = "1966615548";
   </script>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <!-- This script adds the flutter initialization JS code -->
@@ -66,7 +66,7 @@
 </style>
 </head>
 <body>
-<div class="loader"></div>
+<div class="loader" id="loading"></div>
 <script>
 
   // Init TWA
@@ -136,6 +136,7 @@
       },
       onEntrypointLoaded: function(engineInitializer) {
         engineInitializer.initializeEngine().then(function(appRunner) {
+          document.getElementById("loading").style.display = 'none';
           appRunner.runApp();
         });
       }
