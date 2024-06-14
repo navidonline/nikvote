@@ -34,7 +34,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "858094072";
+    const serviceWorkerVersion = "3048986654";
   </script>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <!-- This script adds the flutter initialization JS code -->
@@ -69,10 +69,9 @@
 <div class="loader" id="loading"></div>
 <script>
 
-  // Init TWA
   Telegram.WebApp.ready();
+  Telegram.WebApp.expand();
 
-      // Show main button
       Telegram.WebApp.MainButton.setParams({
           text: 'خروج'
       });
