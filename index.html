@@ -34,7 +34,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1439163140";
+    const serviceWorkerVersion = "249986162";
   </script>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <!-- This script adds the flutter initialization JS code -->
@@ -72,10 +72,6 @@
   // Init TWA
   Telegram.WebApp.ready();
 
-  Telegram.WebApp.onEvent('themeChanged', function() {
-          document.documentElement.className = Telegram.WebApp.colorScheme;
-      });
-
       // Show main button
       Telegram.WebApp.MainButton.setParams({
           text: 'خروج'
@@ -87,46 +83,6 @@
       Telegram.WebApp.SettingsButton.show();
       Telegram.WebApp.BackButton.show();
       Telegram.WebApp.enableClosingConfirmation();
-
-
-      // Function to call showPopup API
-      function showPopup() {
-          Telegram.WebApp.showPopup({
-              title: 'Title',
-              message: 'Some message',
-              buttons: [
-                  {id: 'link', type: 'default', text: 'Open ton.org'},
-                  {type: 'cancel'},
-              ]
-          }, function(btn) {
-              if (btn === 'link') {
-                  Telegram.WebApp.openLink('https://ton.org/');
-              }
-          });
-      };
-
-      // Function to toggle main TWA button
-      function toggleMainButton() {
-          if (Telegram.WebApp.MainButton.isVisible) {
-              Telegram.WebApp.MainButton.hide();
-          } else {
-              Telegram.WebApp.MainButton.show();
-          }
-      };
-
-      function setViewportData() {
-
-      }
-
-      Telegram.WebApp.setHeaderColor('secondary_bg_color');
-
-      Telegram.WebApp.onEvent('viewportChanged', setViewportData);
-
-      Telegram.WebApp.onEvent('themeChanged', function() {
-          document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
-      });
-
-      Telegram.WebApp.expand();
 
   window.addEventListener('load', function(ev) {
     // Download main.dart.js
